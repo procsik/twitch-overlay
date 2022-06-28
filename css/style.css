@@ -1,0 +1,90 @@
+@import "reset.css";
+
+body {
+  /* background: gray; */
+}
+
+#app {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  /* align-items: baseline; */
+
+  position: absolute;
+  top: 7rem;
+  right: 0;
+  bottom: 5rem;
+  left: 0;
+
+  /* border: 3px solid #ff0000; */
+}
+
+dbd-elem {
+  /* flex: auto; */
+  position: relative;
+  display: none;
+  margin: 30px 10px 0 10px;
+  height: 80px;
+  width: 80px;
+  /* border: 1px solid #ff0000; */
+  opacity: 1;
+  flex-direction: column;
+}
+
+.dbd-elem-b::before {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: -35px;
+
+  text-shadow: 1px 1px 1px #000;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  /* font-family: rubik,helvetica,arial,sans-serif; */
+  color: #ff8800;
+  content: attr(data-before);
+}
+
+.dbd-elem-a::after {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 80px;
+
+  font-size: 0.9rem;
+  content: attr(data-after);
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.dbd-elem-am {
+  color: white;
+}
+
+.dbd-elem-aa {
+  color: #e8c252;
+}
+
+.dbd-elem-ac {
+  color: #ff0000;
+}
+
+#switcher {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 7rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/StatusEffects.png');
+  /* box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 1); */
+}
